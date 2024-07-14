@@ -1,0 +1,28 @@
+body{
+    border-top: 3px #EB5353 dotted;
+    border-right: 3p #F9D923 double;
+    border-bottom: 3px #36AE7C dashed;
+    border-left:  3px #187495 solid;
+}
+div{
+    border: 3px solid pink;
+    background-color: aqua;
+    padding:100px;
+    margin:100px
+
+
+}
+form{
+    border:  1px solid pink;
+    background-color: skyblue;
+   padding: 0%;
+    margin: 20%;
+    display: inline-block
+;
+}
+canvas
+{
+ margin:0%;  
+ padding: 0%;
+ border: 2px solid orangered;
+}
