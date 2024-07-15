@@ -1,229 +1,231 @@
-*{
+/* Réinitialiser les marges, les espacements et la boîte de dimensionnement, définir la police */
+* {
     margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: "Arial" , "sans-serif";
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", "sans-serif";
 }
-body{
 
-    color :white;
-
+/* Couleur du texte pour le corps de la page */
+body {
+    color: white;
 }
-.header
-{
-    position: fixed;
+
+/* Style pour l'en-tête (header) de la page */
+.header {
+    position: fixed; /* Fixer l'en-tête en haut de la page */
     top: 0;
-    left:0;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: transparent;
-   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    left: 0;
+    width: 100%; /* Prendre toute la largeur */
+    padding: 10px 20px; /* Espacement intérieur */
+    background-color: transparent; /* Couleur de fond transparente */
+    display: flex; /* Utiliser Flexbox pour l'alignement */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    align-items: center; /* Aligner les éléments au centre verticalement */
+    z-index: 100; /* Mettre l'en-tête au premier plan */
 }
-.logo
-{
+
+/* Style pour le logo dans l'en-tête */
+.logo {
     font-size: 25px;
-    color:azure;
-    text-decoration: none;
-    font-weight:600;
+    color: azure; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: 600; /* Épaisseur du texte */
 }
-.navbar a{
+
+/* Style pour les liens de la barre de navigation */
+.navbar a {
     font-size: 15px;
-    color:azure;
-   text-decoration: none;
-    font-weight:500;
-    margin-left: 35px;
-    transform: -3s;
+    color: azure; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: 500; /* Épaisseur du texte */
+    margin-left: 35px; /* Espacement à gauche de chaque lien */
+    transform: -3s; /* Propriété incorrecte et sans effet */
 }
+
+/* Effet de survol et actif pour les liens de la barre de navigation */
 .navbar a:hover,
-.navbar a:active
-{
-    color: blue;
+.navbar a:active {
+    color: blue; /* Changer la couleur du texte au survol ou lorsqu'actif */
+}
 
+/* Style pour la section de la page d'accueil */
+.home {
+    height: 100vh; /* Hauteur de la fenêtre visible */
+    background: #16acea; /* Couleur de fond */
+    display: flex; /* Utiliser Flexbox pour l'alignement */
+    align-items: center; /* Aligner les éléments au centre verticalement */
+    padding: 0 10%; /* Espacement intérieur */
 }
-.home{
-    height: 100vh;
-    background: #16acea;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
 
+/* Style pour la section info */
+.info {
+    background-color: #16acea; /* Couleur de fond */
+    height: 100vh; /* Hauteur de la fenêtre visible */
+    display: flex; /* Utiliser Flexbox pour l'alignement */
+    align-items: center; /* Aligner les éléments au centre verticalement */
+    padding: 0 10%; /* Espacement intérieur */
+}
 
+/* Style pour la section atout */
+.atout {
+    background: linear-gradient(to right, #16acea, #79cbb8); /* Couleur de fond */
+    height: 100vh; /* Hauteur de la fenêtre visible */
+    display: flex; /* Utiliser Flexbox pour l'alignement */
+    align-items: center; /* Aligner les éléments au centre verticalement */
+    padding: 0 10%; /* Espacement intérieur */
 }
-.info
-{
-  background-color: #0d0326;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
-}
-.atout
-{
-background-color: #79cbb8;
-height: 100vh;
-display: flex;
-align-items: center;
-padding: 0 10%;
-}
-.presentation
-{
-  background-color: #9bc475;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
 
+/* Style pour la section présentation */
+.presentation {
+    background-color: #16acea; /* Couleur de fond */
+    height: 100vh; /* Hauteur de la fenêtre visible */
+    display: flex; /* Utiliser Flexbox pour l'alignement */
+    align-items: center; /* Aligner les éléments au centre verticalement */
+    padding: 0 10%; /* Espacement intérieur */
 }
-.home-contener{
-    background:transparent ;
-    max-width: 600px;
+
+/* Style pour le conteneur de la page d'accueil */
+.home-contenere {
+    background: transparent; /* Couleur de fond transparente */
+    max-width: 600px; /* Largeur maximale du conteneur */
 }
-.home-contener h1{
+
+/* Style pour le titre principal dans la page d'accueil */
+.home-contenere h1 {
     font-size: 60px;
-    font-weight: 700;
-    line-height: 1.2;
-
-    
+    font-weight: 700; /* Épaisseur du texte */
+    line-height: 1.2; /* Hauteur de ligne */
 }
-.home-contener h3{
+
+/* Style pour le sous-titre dans la page d'accueil */
+.home-contenere h3 {
     font-size: 35px;
-    color: blue;
-
-
+    color: blue; /* Couleur du texte */
 }
-.home-contener p {
+
+/* Style pour les paragraphes dans la page d'accueil */
+.home-contenere p {
     font-size: 20px;
-   margin: 20px 0 40px;
-
+    margin: 20px 0 40px; /* Espacement extérieur */
 }
-.home-contener .btn-box{
+
+/* Style pour la boîte de boutons dans la page d'accueil */
+.home-contenere .btn-box {
     width: 345px;
     height: 51px;
-    justify-content: space-between;
-   
+    justify-content: space-between; /* Espacement égal entre les boutons */
 }
+
+/* Style pour les liens dans la boîte de boutons */
 .btn-box a {
     position: relative;
     display: inline-block;
-    justify-content: center;
-    align-items: center;
-    width :150px ;
-    height: 100%;
-    background: blue;
-    border : 2px solid blue;
-    border-radius: 5px;
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    text-decoration: none;
-
-}
-.btn-box a:nth-child(2)
-{
-   
-    background: transparent;
-    color: blue;
-}
-.btn-box a:nth-child(2)::before
-{
-    background: blue;
-  
-}
-.btn-box a:nth-child(1)
-{
-   
-    background: transparent;
-    color: blue;
+    justify-content: center; /* Centrer le contenu */
+    align-items: center; /* Aligner verticalement */
+    width: 150px; /* Largeur fixe */
+    height: 100%; /* Hauteur complète */
+    background: blue; /* Couleur de fond */
+    border: 2px solid blue; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 20px; /* Taille de police */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: 600; /* Épaisseur du texte */
+    letter-spacing: 1px; /* Espacement des lettres */
+    z-index: 1; /* Mettre les liens au-dessus des autres éléments */
+    overflow: hidden; /* Masquer le débordement */
+    text-decoration: none; /* Pas de soulignement (doublon) */
 }
 
-.btn-box a:nth-child(2):hover
-{
-   color:black;
-  
-}
-.btn-box a:nth-child(1)::before
-{
-    background: blue;
-  
+/* Style spécifique pour le deuxième lien dans la boîte de boutons */
+.btn-box a:nth-child(2) {
+    background: transparent; /* Fond transparent */
+    color: blue; /* Couleur du texte */
 }
 
-.btn-box a:nth-child(1):hover
-{
-    color:black;
-}
-.btn-box a::before{
-    content: "";
-    position: absolute;
-    top:0;
-    left: 0;
-    width :0;
-    height: 100%;
-    background: black;
-    z-index: -1;
-    transition: -5s;
-}
-.btn-box a:hover::before{
-    width: 100%;
+/* Style pour l'effet avant le survol sur le deuxième lien */
+.btn-box a:nth-child(2)::before {
+    background: blue; /* Couleur de fond pour l'effet */
 }
 
-.home-sci{
-    position: absolute;
-    bottom: 40px;
-    width: 100px;
-    display: flex;
-    font-size: 18px;
-    margin-bottom: 10px;
-    justify-content: space-between;
+/* Style pour l'effet de survol sur le deuxième lien */
+.btn-box a:nth-child(2):hover {
+    color: black; /* Changer la couleur du texte au survol */
 }
 
- .home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height:20px;
-    background: transparent;
-    border: 2px solid blue;
-    border-radius: 50%;
-    font-size: 15px;
-    color: blue;
-    text-decoration: none;
-    overflow: hidden;
-    transition: -5s;
- }
- .contener p {
-    font-size: 25px;
-    align-items: center;
-    display: inline-flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 51px;
-   
-    
+/* Style pour l'effet avant le survol sur le premier lien */
+.btn-box a:nth-child(1)::before {
+    background: blue; /* Couleur de fond pour l'effet */
 }
- .home-sci a:hover{
-    color: black;
- }
 
- .home-sci a::before{
+/* Style pour l'effet de survol sur le premier lien */
+.btn-box a:nth-child(1):hover {
+    color: black; /* Changer la couleur du texte au survol */
+}
+
+/* Style pour l'effet avant le survol sur tous les liens */
+.btn-box a::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 0; /* Largeur initiale de l'effet */
     height: 100%;
-    background:blue ;
-    z-index: -1;
-    transition: -5s;
-    
+    background: black; /* Couleur de fond pour l'effet */
+    z-index: -1; /* Mettre l'effet en arrière-plan */
+    transition: 0.5s; /* Transition pour l'effet (propriété corrigée) */
+}
+
+/* Style pour l'effet de survol sur tous les liens */
+.btn-box a:hover::before {
+    width: 100%; /* Largeur de l'effet au survol */
+}
+
+/* Style pour les icônes sociales dans la page d'accueil */
+.home-sci {
+    position: absolute;
+    bottom: 40px; /* Position en bas */
+    width: 100px; /* Largeur des icônes */
+    display: flex; /* Utiliser Flexbox pour l'alignement */
+    font-size: 18px; /* Taille de police */
+    margin-bottom: 10px; /* Espacement extérieur en bas */
+    justify-content: space-between; /* Espacement égal entre les icônes */
+}
+
+/* Style pour chaque lien social */
+.home-sci a {
+    position: relative;
+    display: inline-flex; /* Affichage en ligne avec Flexbox */
+    justify-content: center; /* Centrer le contenu */
+    align-items: center; /* Aligner verticalement */
+    width: 20px; /* Largeur fixe */
+    height: 20px; /* Hauteur fixe */
+    background: transparent; /* Fond transparent */
+    border: 2px solid blue; /* Bordure */
+    border-radius: 50%; /* Forme ronde */
+    font-size: 15px; /* Taille de police */
+    color: blue; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    overflow: hidden; /* Masquer le débordement */
+    transition: 0.5s; /* Transition pour l'effet (propriété corrigée) */
+}
+
+/* Effet de survol pour les liens sociaux */
+.home-sci a:hover {
+    color: black; /* Changer la couleur du texte au survol */
+}
+
+/* Effet avant le survol pour les liens sociaux */
+.home-sci a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Largeur initiale de l'effet */
+    height: 100%;
+    background: blue; /* Couleur de fond pour l'effet */
+    z-index: -1; /* Mettre l'effet en arrière-plan */
+    transition: 0.5s; /* Transition pour l'effet (propriété corrigée) */
  }
 
  .home-sci a:hover::before{
@@ -296,3 +298,234 @@ padding: 0 10%;
         opacity: 0;
     }
 }
+/* Style pour la section À propos */
+.about {
+    padding: 120px 20%;
+    background: linear-gradient(to right, #16acea, #79cbb8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.profile-img {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content {
+    flex: 2;
+    min-width: 250px;
+    padding: 20px;
+}
+
+
+
+.profile-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.home-container {
+    background: transparent;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Heading styling */
+.home-container h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+/* Skills section styling */
+.skills {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Skill box styling */
+.skill {
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+}
+
+/* Skill icon styling */
+.skill-icon {
+    margin-bottom: 20px;
+}
+
+.skill-icon img {
+    max-width: 100%;
+}
+
+/* Skill title styling */
+.skill h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Skill description styling */
+.skill p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.atout{
+    width:100%;
+    overflow: hidden;
+    position:relative;
+}
+
+.scroll-container {
+    display: flex;
+    overflow: auto; /* Permet de faire défiler horizontalement */
+    scroll-snap-type: x mandatory; /* Permet de défiler par "snap" */
+    -webkit-overflow-scrolling: touch; /* Amélioration de défilement pour iOS */
+    scroll-behavior: smooth; /* Ajoute un défilement fluide */
+    padding-bottom: 20px; /* Ajoute un espace en bas pour la lisibilité */
+    width: 100%;
+}
+
+.item {
+    flex: 0 0 auto; /* Taille fixe pour chaque élément */
+    width: 200px; /* Largeur de chaque élément */
+    display: flex;
+    transition: transform 0.1s ease-in-out; /* Durée de transition plus rapide */
+    margin-right: 10px; /* Marge entre chaque élément */
+    scroll-snap-align: start; /* Aligne les éléments au début de la zone de défilement */
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Pour arrondir les coins des images */
+}
+
+.item p {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.presentation {
+    padding: 50px 0; /* Ajoute de l'espace autour du contenu */
+    background:  #16acea; /* Couleur de fond */
+    text-align: center; /* Centre le contenu horizontalement */
+
+    /* Pour centrer verticalement le contenu, si nécessaire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ajuste la hauteur selon le contenu */
+}
+
+.home-contener {
+    max-width: 700px; /* Largeur maximale du contenu */
+    max-height: min-content;
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    background-color:#16acea; /* Couleur de fond du contenu */
+    padding: 20px; /* Espace intérieur du conteneur */
+    border-radius: 10px; /* Coins arrondis du conteneur */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour le conteneur */
+}
+
+.home-contener h1 {
+    font-size: 2.5rem; /* Taille de police pour le titre principal */
+    margin-bottom: 10px; /* Marge en bas du titre */
+    color: #333; /* Couleur du texte */
+}
+
+.home-contener p {
+    font-size: 1.1rem; /* Taille de police pour les paragraphes */
+    line-height: 2; /* Hauteur de ligne pour une meilleure lisibilité */
+    color: white; /* Cwhiteouleur du texte */
+}
+
+ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime les espaces intérieurs de la liste */
+}
+
+ul li {
+    margin-bottom: 10px; /* Espacement entre chaque élément de la liste */
+}
+
+.social-icons {
+    margin-top: 20px; /* Espacement entre les icônes sociales et le contenu précédent */
+}
+
+.social-icons a {
+    display: inline-block; /* Affiche les icônes sur une ligne */
+    font-size: 1.5rem; /* Taille de police pour les icônes */
+    margin-right: 10px; /* Espacement entre chaque icône */
+    color: #333; /* Couleur du texte des icônes */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Couleur du texte des icônes au survol */
+}
+
+form {
+    margin-top: 20px; /* Espacement entre le formulaire et le contenu précédent */
+}
+
+form label {
+    display: block; /* Affiche chaque étiquette sur une nouvelle ligne */
+    font-weight: bold; /* Texte en gras pour les étiquettes */
+    margin-bottom: 5px; /* Espacement en bas de chaque étiquette */
+    color:white; /* Couleur du texte des étiquettes */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 70%; /* Largeur pleine pour les champs de formulaire */
+    padding: 10px; /* Remplissage intérieur des champs */
+    margin-bottom: 10px; /* Espacement entre chaque champ */
+    border: 1px solid #ccc; /* Bordure légère autour des champs */
+    border-radius: 5px; /* Coins arrondis pour les champs */
+    font-size: 1rem; /* Taille de police pour les champs de formulaire */
+}
+
+form textarea {
+    resize: vertical; /* Redimensionnement vertical autorisé pour le champ de texte */
+}
+
+form input[type="submit"] {
+    background-color: #007bff; /* Couleur de fond du bouton Envoyer */
+    color: #fff; /* Couleur du texte du bouton Envoyer */
+    border: none; /* Supprime la bordure du bouton */
+    padding: 10px 20px; /* Remplissage intérieur du bouton */
+    font-size: 1rem; /* Taille de police pour le bouton */
+    cursor: pointer; /* Curseur pointer au survol du bouton */
+    border-radius: 3px; /* Coins arrondis pour le bouton */
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+

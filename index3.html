@@ -1,31 +1,34 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--Indique aux navigateur que le code est ecrit en html-->
 <html>
-<meta charset="utf_8" >
+<meta charset="utf_8" ><!--Indique l'encodage du document-->
 <title> je vais reussir a atteintre mon objectif</title>
-<link href="style3.css" rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="style3.css" rel="stylesheet"><!--Indique le  liens vers les feuille de style css-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--liens vers une bibiotheque d'icone Boxicone-->
 
 <body>
-    <header class=" header">
-        <a href="#" class="logo" > YVANA </a>
-    <nav class="navbar">
+    <header class=" header"><!--contient le logo et la barre de navigation en html-->
+        <a href="#" class="logo" > Porfolio </a>
+    <nav class="navbar"><!--Barre de navigation avec les lins interne en html-->
       
-           <a href="#" class="active"> Accueil</a>
+           <a href="#" class="active"> Accueil</a><!--dans la navigation mene au differente section en html-->
             <a href="#" class="active">  A propos</a>
+            <a href="#" class="active"> Competence</a>
+            <a href="#" class="active"> Marchandise</a><!--dans la navigation mene au differente section en html-->
+            <a href="#" class="active">  Contact</a>
             <a href="#" class="active"> porfolio</a>
         
     </nav>
 </header>
-<section class="home">
+<section class="home"><!--definir une section principale ou une vue d'accueil-->
     
-    <div class="home-contener">
+    <div class="home-contenere"><!--contient le contenu textuel principale-->
         <h1>je suis Yvana </h1>
         <h3>  dev</h3>
         <h3> entrepreneure</h3>
         <p>
             Je suis étudiante en informatique appliquée à l'université de Moncton. Je fais dans la vente de perruques, de gloss,de bonnet et de boubou. je livre partout au canada
         </p>
-        <div class="btn-box">
+        <div class="btn-box"><!--contient des bouton pour des action-->
             <a href="#"> passez vos commande</a>
             <a href="#"> Parlons</a>
             
@@ -39,7 +42,7 @@
         <img id="myImage" src="yva.jpg" alt=" Image"class="bordures-modifiees"  >
        </div>
       
-      
+       <div class="bubble-container"></div>
     <div class="home-sci">
         
         <a href="#"><i class='bx bxl-telegram' ></i> </a>
@@ -51,112 +54,152 @@
 
 </section>
 
-<section class="info">
-    
-    <div class="home-contener">
-        <h1>je suis Yvana </h1>
-        <h3> apprentie du frontend</h3>
-        <p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ut molestiae beatae minus mollitia consequuntur explicabo, minima odit fugiat totam ducimus in. Corrupti nisi itaque praesentium enim accusamus!
-        </p>
-        <div class="btn-box">
-            <a href="#"> c'est moi</a>
-            <a href="#"> Parlons</a>
-            
+<section class="about">
+    <div class="container">
+        <div class="profile-img">
+            <img src="telechargement.jpeg" alt="Yvana">
         </div>
+        <div class="profile-content">
     
-       
+            <p>
+                Passionnée par le développement web et mobile, je me spécialise dans la création de sites web interactifs et responsifs. Mon objectif
+                 est de devenir une experte du frontend, maîtrisant les technologies les plus récentes pour offrir 
+                 des expériences utilisateur exceptionnelles.
+            </p>
+            <p>
+                En accordant une grande importance aux détails et 
+                avec une volonté ardente d'apprendre, 
+                je suis toujours à la recherche de nouveaux défis
+                 et de nouvelles opportunités pour améliorer mes aptitudes.
+                  Outre le codage, je suis également une entrepreneure qui écrit des livres et 
+                  vend différentes marchandises, que vous pouvez consulter en cliquant sur marchandises. </p>
+            <div class="btn-box">
+                <a href="#">En savoir plus</a>
+                <a href="#">Contactez-moi</a>
+            </div>
+        </div>
     </div>
-    <div class="im">
-        <img id="myImage" src="yva.jpg" alt=" Image"class="bordures-modifiees"  >
-       </div>
-x
-       <div class="home-sci">
-        <a href="#"><i class='bx bxl-telegram' ></i> </a>
-        <a href="#"> <i class='bx bxl-twitter' ></i></a>
-        <a href="#"> <i class='bx bxl-facebook'></i></a>
-        <a href="#">  <i class='bx bxl-tiktok' ></i></a>
-
-    </div>
-
 </section>
 
+
+<section class="info">
+    <div class="home-container">
+        <h1> Mes compétences</h1>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-icon">
+                    <img src="csharp.png" alt="C#" width="80">
+                </div>
+                <h3>C#</h3>
+                <p>connaissance du langage</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <img src="js.png" alt="JavaScript" width="80">
+                </div>
+                <h3>JavaScript</h3>
+                <p>Expertise en développement web interactif</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <img src="html.png" alt="HTML & CSS" width="80">
+                </div>
+                <h3>HTML & CSS</h3>
+                <p>Création de sites web responsifs</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <img src="c.png" alt="C#" width="80">
+                </div>
+                <h3>C++</h3>
+                <p>Maitrise du langage</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <img src="sql.png" alt="Base de données" width="80">
+                </div>
+                <h3>Base de données</h3>
+                <p>Gestion et création de bases de données</p>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="atout">
     
-    <div class="home-contener">
-        <h1>je suis Yvana </h1>
-      
-       
-        <div>
-            <h3> Language</h3>
-        <div class="btn-box">
-            <a href="#"> Francais</a>
-            <a href="#"> Anglais</a>
-        </div>  
+    <div class="scroll-container">
+        <div class="item">
+            <img src="perruque.jpg" alt="Boubou">
+            <p>perruque</p>
         </div>
-        <div>
-            <h3> HOBBIES</h3>
-        <div class="btn-box">
-            <a href="#"> TIKTOK</a>
-            <a href="#"> CODER</a>
-            <a href="#"> Lecture</a>
-            <a href="#"> Ecriture</a>
-        </div>    
+        <div class="item">
+            <img src="perruque1.jpg" alt="Boubou">
+            <p>perruque</p>
         </div>
-        <div>
-            <h3> HOBBIES</h3>
-        <div class="btn-box">
-            <a href="#"> TIKTOK</a>
-            <a href="#"> CODER</a>
-        </div>    
+        <div class="item">
+            <img src="perruque2.jpg" alt="Boubou"  width="100" height="100">
+            <p>perruque</p>
         </div>
-       
+        <div class="item">
+            <img src="pull.jpg" alt="Boubou" width="100" height="100">
+            <p>Habit</p>
+        </div>
+        <div class="item">
+            <img src="boubou.jpg" alt="Boubou" width="100" height="100">
+            <p>Boubou</p>
+        </div>
+        <div class="item">
+            <img src="gloss.jpg" alt="Gloss" width="100" height="100">
+            <p>Gloss</p>
+        </div>
+        <div class="item">
+            <img src="bonnet.jpg" alt="Bonnet" width="100" height="100">
+            <p>Bonnet</p>
+        </div>
+        <div class="item">
+            <img src="perruque.jpg" alt="Perruque" width="100" height="100">
+            <p>Perruque</p>
+        </div>
+        <div class="item">
+            <img src="babouche.jpg" alt="Livre" width="100" height="100">
+            <p>Babouche</p>
+        </div>
     </div>
-    <div class="im">
-        <img id="myImage" src="yva.jpg" alt=" Image"class="bordures-modifiees"  >
-       </div>
-
-    <div class="home-sci">
-      
-        <a href="#"><i class='bx bxl-telegram' ></i> </a>
-        <a href="#"> <i class='bx bxl-twitter' ></i></a>
-        <a href="#"> <i class='bx bxl-facebook'></i></a>
-        <a href="#">  <i class='bx bxl-tiktok' ></i></a>
-
-    </div>
-
 </section>
+
 
 <section class="presentation">
     
     <div class="home-contener">
-        <h1>je suis Yvana </h1>
-        <h3> apprentie du frontend</h3>
-        <p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ut molestiae beatae minus mollitia consequuntur explicabo, minima odit fugiat totam ducimus in. Corrupti nisi itaque praesentium enim accusamus!
-        </p>
-        <div class="btn-box">
-            <a href="#"> c'est moi</a>
-            <a href="#"> Parlons</a>
-            
+        <h1>Contactez-moi</h1>
+        <p>Pour toute demande ou commande, n'hésitez pas à me contacter :</p>
+        
+        <ul>
+            <li>Email : <a href="mailto:votre@email.com">votre@email.com</a></li>
+            <li>Téléphone : <a href="tel:+1234567890">+1234567890</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#"><i class='bx bxl-telegram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-tiktok'></i></a>
         </div>
-    
-       
+
+        <form action="mailto:votre@email.com" method="post" enctype="text/plain">
+            <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" name="nom" required><br>
+
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Envoyer">
+        </form>
     </div>
-    <div class="im">
-        <img id="myImage" src="yva.jpg" alt=" Image"class="bordures-modifiees"  >
-       </div>
-
-    <div class="home-sci">
-       
-        <a href="#"><i class='bx bxl-telegram' ></i> </a>
-        <a href="#"> <i class='bx bxl-twitter' ></i></a>
-        <a href="#"> <i class='bx bxl-facebook'></i></a>
-        <a href="#">  <i class='bx bxl-tiktok' ></i></a>
-
-    </div>
-
 </section>
+
 <script src="index3.js">
 </script>
   
