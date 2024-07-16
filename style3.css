@@ -395,42 +395,97 @@ body {
     font-size: 16px;
     line-height: 1.6;
 }
-.atout{
-    width:100%;
+.atout {
+    width: 100%;
     overflow: hidden;
-    position:relative;
+    position: relative;
 }
 
 .scroll-container {
     display: flex;
-    overflow: auto; /* Permet de faire défiler horizontalement */
-    scroll-snap-type: x mandatory; /* Permet de défiler par "snap" */
-    -webkit-overflow-scrolling: touch; /* Amélioration de défilement pour iOS */
-    scroll-behavior: smooth; /* Ajoute un défilement fluide */
-    padding-bottom: 20px; /* Ajoute un espace en bas pour la lisibilité */
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
     width: 100%;
 }
 
 .item {
-    flex: 0 0 auto; /* Taille fixe pour chaque élément */
-    width: 200px; /* Largeur de chaque élément */
+    flex: 0 0 auto;
+    width: 200px;
     display: flex;
-    transition: transform 0.1s ease-in-out; /* Durée de transition plus rapide */
-    margin-right: 10px; /* Marge entre chaque élément */
-    scroll-snap-align: start; /* Aligne les éléments au début de la zone de défilement */
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.1s ease-in-out;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .item img {
     width: 100%;
-    height: auto;
-    border-radius: 5px; /* Pour arrondir les coins des images */
+    height: 150px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Ajuste l'image pour remplir l'espace sans déformer */
+    border-radius: 5px;
 }
 
-.item p {
+.product-info {
     text-align: center;
-    margin-top: 5px;
-    font-weight: bold;
+    padding: 10px 0;
 }
+
+.product-name {
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.product-price {
+    color: green;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style pour la section du panier */
+.cart {
+    margin-top: 50px;
+
+    display: none;
+}
+.cart.show {
+    display: block;
+}
+.cart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .presentation {
     padding: 50px 0; /* Ajoute de l'espace autour du contenu */
     background:  #16acea; /* Couleur de fond */
