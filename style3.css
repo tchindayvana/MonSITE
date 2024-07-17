@@ -1,52 +1,88 @@
-/* Réinitialiser les marges, les espacements et la boîte de dimensionnement, définir la police */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arial", "sans-serif";
+    font-family: "Arial", sans-serif;
 }
 
-/* Couleur du texte pour le corps de la page */
 body {
     color: white;
 }
 
-/* Style pour l'en-tête (header) de la page */
 .header {
-    position: fixed; /* Fixer l'en-tête en haut de la page */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Prendre toute la largeur */
-    padding: 10px 20px; /* Espacement intérieur */
-    background-color: transparent; /* Couleur de fond transparente */
-    display: flex; /* Utiliser Flexbox pour l'alignement */
-    justify-content: space-between; /* Espacement égal entre les éléments */
-    align-items: center; /* Aligner les éléments au centre verticalement */
-    z-index: 100; /* Mettre l'en-tête au premier plan */
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-/* Style pour le logo dans l'en-tête */
 .logo {
     font-size: 25px;
-    color: azure; /* Couleur du texte */
-    text-decoration: none; /* Pas de soulignement */
-    font-weight: 600; /* Épaisseur du texte */
+    color: azure;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-/* Style pour les liens de la barre de navigation */
+.navbar {
+    display: flex;
+}
+
 .navbar a {
     font-size: 15px;
-    color: azure; /* Couleur du texte */
-    text-decoration: none; /* Pas de soulignement */
-    font-weight: 500; /* Épaisseur du texte */
-    margin-left: 35px; /* Espacement à gauche de chaque lien */
-    transform: -3s; /* Propriété incorrecte et sans effet */
+    color: azure;/* Couleur par défaut pour les liens */
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s ease; /* Transition douce pour la couleur */
 }
 
-/* Effet de survol et actif pour les liens de la barre de navigation */
 .navbar a:hover,
-.navbar a:active {
-    color: blue; /* Changer la couleur du texte au survol ou lorsqu'actif */
+.navbar a.active {
+    color:blue;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    color: azure;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        flex-direction: column;
+      
+        width: 100%;
+        z-index: 99;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0px;
+        font-size: 18px;
+        text-align: right;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
 }
 
 /* Style pour la section de la page d'accueil */

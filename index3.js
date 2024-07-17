@@ -200,3 +200,19 @@ function updateCartDisplay() {
 function showSuccessMessage() {
     alert('Produit ajouté au panier avec succès !');
 }
+/******header**** */
+// Sélectionnez l'icône du menu et la barre de navigation
+const menuIcon = document.getElementById('menu-icon');
+const navbar = document.getElementById('navbar');
+
+// Ajoutez un écouteur d'événements au clic sur l'icône du menu
+menuIcon.addEventListener('click', function() {
+    // Basculez la classe 'active' pour afficher ou masquer la barre de navigation
+    navbar.classList.toggle('active');
+});
+// Fermer le menu si on clique en dehors sur mobile
+document.addEventListener('click', (event) => {
+    if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+        navbar.classList.remove('active');
+    }
+});
