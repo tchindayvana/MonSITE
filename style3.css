@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo {
@@ -27,7 +27,7 @@ body {
     color: azure;
     text-decoration: none;
     font-weight: 600;
-}
+}   
 
 .navbar {
     display: flex;
@@ -48,7 +48,7 @@ body {
 }
 
 .menu-icon {
-    display: none;
+    display: none;/**cache l'element de la page*/
     font-size: 25px;
     color: azure;
     cursor: pointer;
@@ -60,18 +60,19 @@ body {
     }
 
     .navbar {
-        display: none;
-        position: absolute;
+        display: none;/*Le menu est caché par défaut.*/
+        position: absolute;/*Lorsque le menu est affiché, il est positionné par rapport à son conteneur le plus proche ayant une position définie.*/
         top: 60px;
         right: 0;
-        flex-direction: column;
+        flex-direction: column;/*Les éléments du menu sont empilés verticalement.
+        Ces propriétés permettent de contrôler à la fois la visibilité, la position et la disposit*/
       
         width: 100%;
         z-index: 99;
     }
 
     .navbar.active {
-        display: flex;
+        display: flex;/*Le conteneur devient un conteneur flexible.*/
     }
 
     .navbar a {
@@ -84,7 +85,9 @@ body {
         font-size: 20px;
     }
 }
-
+section {
+    padding-top: 80px; /* Espace pour ne pas cacher le contenu sous la barre de navigation */
+}
 /* Style pour la section de la page d'accueil */
 .home {
     height: 100vh; /* Hauteur de la fenêtre visible */
@@ -92,6 +95,8 @@ body {
     display: flex; /* Utiliser Flexbox pour l'alignement */
     align-items: center; /* Aligner les éléments au centre verticalement */
     padding: 0 10%; /* Espacement intérieur */
+    position: relative; /* Pour s'assurer que le z-index fonctionne correctement */
+    z-index: 1;
 }
 
 /* Style pour la section info */
@@ -101,6 +106,8 @@ body {
     display: flex; /* Utiliser Flexbox pour l'alignement */
     align-items: center; /* Aligner les éléments au centre verticalement */
     padding: 0 10%; /* Espacement intérieur */
+    position: relative; /* Pour s'assurer que le z-index fonctionne correctement */
+    z-index: 2;
 }
 
 /* Style pour la section atout */
@@ -110,6 +117,7 @@ body {
     display: flex; /* Utiliser Flexbox pour l'alignement */
     align-items: center; /* Aligner les éléments au centre verticalement */
     padding: 0 10%; /* Espacement intérieur */
+    
 }
 
 /* Style pour la section présentation */
@@ -155,7 +163,7 @@ body {
 
 /* Style pour les liens dans la boîte de boutons */
 .btn-box a {
-    position: relative;
+    position: relative;/*Le conteneur peut être repositionné par rapport à sa position normale sans sortir du flux du document.*/
     display: inline-block;
     justify-content: center; /* Centrer le contenu */
     align-items: center; /* Aligner verticalement */

@@ -124,61 +124,84 @@ const viewCartBtn = document.getElementById('view-cart-btn');
 const closeCartBtn = document.getElementById('close-cart-btn');
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionne tous les boutons "Ajouter au panier"
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    // Sélectionne le bouton "Vider le panier"
     const clearCartButton = document.getElementById('clear-cart');
+    // Sélectionne l'élément pour afficher les articles du panier
     const cartItemsElement = document.getElementById('cart-items');
+    // Sélectionne l'élément pour afficher le prix total
     const totalPriceElement = document.getElementById('total-price');
 
+    // Ajoute un écouteur d'événements à chaque bouton "Ajouter au panier"
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function(event) {
             event.stopPropagation();
+            // Sélectionne l'élément produit le plus proche
             const productElement = event.target.closest('.item');
+            // Récupère le nom et le prix du produit
             const productName = productElement.dataset.name;
             const productPrice = parseFloat(productElement.dataset.price);
 
+            // Ajoute le produit au panier
             addToCart(productName, productPrice);
+            // Affiche un message de succès
             showSuccessMessage();
+            // Met à jour l'affichage du panier
             updateCartDisplay();
         });
     });
 
+    // Ajoute un écouteur d'événements au bouton "Vider le panier"
     clearCartButton.addEventListener('click', function() {
+        // Vide le panier
         cart = [];
+        // Met à jour l'affichage du panier
         updateCartDisplay();
     });
 
+    // Ajoute un écouteur d'événements pour supprimer un article du panier
     cartItemsElement.addEventListener('click', function(event) {
         if (event.target.classList.contains('remove-item')) {
             const index = event.target.dataset.index;
+            // Supprime l'article du panier
             removeFromCart(index);
+            // Met à jour l'affichage du panier
             updateCartDisplay();
         }
     });
 
+    // Affiche la section du panier lorsque le bouton "Voir le panier" est cliqué
     viewCartBtn.addEventListener('click', function() {
         cartSection.classList.add('show');
     });
 
+    // Ferme la section du panier lorsque le bouton "Fermer le panier" est cliqué
     closeCartBtn.addEventListener('click', function() {
         cartSection.classList.remove('show');
     });
 });
 
+// Fonction pour ajouter un produit au panier
 function addToCart(productName, productPrice) {
     cart.push({ name: productName, price: productPrice });
 }
 
+// Fonction pour supprimer un produit du panier par son index
 function removeFromCart(index) {
     cart.splice(index, 1);
 }
 
+// Fonction pour mettre à jour l'affichage du panier
 function updateCartDisplay() {
     const cartItemsElement = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
 
+    // Vide l'élément des articles du panier
     cartItemsElement.innerHTML = '';
 
     let totalPrice = 0;
+    // Parcourt les articles du panier et met à jour l'affichage
     cart.forEach((item, index) => {
         totalPrice += item.price;
 
@@ -194,23 +217,27 @@ function updateCartDisplay() {
         cartItemsElement.appendChild(listItem);
     });
 
+    // Affiche le prix total
     totalPriceElement.textContent = totalPrice;
 }
 
+// Fonction pour afficher un message de succès lorsque le produit est ajouté au panier
 function showSuccessMessage() {
     alert('Produit ajouté au panier avec succès !');
 }
-/******header**** */
-// Sélectionnez l'icône du menu et la barre de navigation
+
+/****** header *****/
+// Sélectionne l'icône du menu et la barre de navigation
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.getElementById('navbar');
 
-// Ajoutez un écouteur d'événements au clic sur l'icône du menu
+// Ajoute un écouteur d'événements au clic sur l'icône du menu
 menuIcon.addEventListener('click', function() {
-    // Basculez la classe 'active' pour afficher ou masquer la barre de navigation
+    // Bascule la classe 'active' pour afficher ou masquer la barre de navigation
     navbar.classList.toggle('active');
 });
-// Fermer le menu si on clique en dehors sur mobile
+
+// Ferme le menu si on clique en dehors sur mobile
 document.addEventListener('click', (event) => {
     if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
         navbar.classList.remove('active');
