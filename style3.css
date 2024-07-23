@@ -86,7 +86,8 @@ body {
     }
 }
 section {
-    padding-top: 80px; /* Espace pour ne pas cacher le contenu sous la barre de navigation */
+    padding: 20px; /* Ajoutez du padding pour créer de l'espace autour du contenu */
+    
 }
 /* Style pour la section de la page d'accueil */
 .home {

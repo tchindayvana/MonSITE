@@ -5,6 +5,9 @@ function rotationImage(){
     image.style.transform ='  rotate(${rotationAngle}deg)';
 }
 image.addEventListener('click ',rotationImage());*/
+
+
+
 // Sélectionner l'élément avec l'ID 'myImage'
 const image = document.getElementById('myImage');
 
@@ -60,6 +63,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Créer une nouvelle bulle toutes les 500 millisecondes
     setInterval(createBubble, 500);
 });
+
+
+
+
 /*
 document.addEventListener("DOMContentLoaded", function() {
     const slider = document.querySelector('.scroll-container');
