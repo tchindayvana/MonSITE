@@ -5,7 +5,19 @@ function rotationImage(){
     image.style.transform ='  rotate(${rotationAngle}deg)';
 }
 image.addEventListener('click ',rotationImage());*/
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+        // Ajoutez la classe fade à toutes les sections
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('fade');
+        });
 
+        // Optionnel : Vous pouvez attendre un certain temps avant de changer de page pour voir l'effet
+        setTimeout(() => {
+            window.location.href = this.href;  // Change de page
+        }, 300); // Délai qui correspond au temps d'animation
+    });
+});
 
 
 // Sélectionner l'élément avec l'ID 'myImage'

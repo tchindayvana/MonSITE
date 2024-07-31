@@ -8,14 +8,17 @@
 body {
     color: white;
 }
-
+.fade {
+    opacity: 0.5;  /* Ajustez la valeur pour plus ou moins de transparence */
+    transition: opacity 0.3s ease;  /* Transition douce pour l'effet */
+}
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 10px 20px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 255, 0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +30,8 @@ body {
     color: azure;
     text-decoration: none;
     font-weight: 600;
-}   
+}  
+ 
 
 .navbar {
     display: flex;
@@ -86,23 +90,23 @@ body {
     }
 }
 section {
-    padding: 20px; /* Ajoutez du padding pour créer de l'espace autour du contenu */
-    
+    padding: 70px 20px 20px; /* Ajout de padding top pour compenser la hauteur de la header */
 }
 /* Style pour la section de la page d'accueil */
 .home {
     height: 100vh; /* Hauteur de la fenêtre visible */
-    background: #16acea; /* Couleur de fond */
+    background:linear-gradient(to right, #16acea, #79cbb8);;; /* Couleur de fond */
     display: flex; /* Utiliser Flexbox pour l'alignement */
     align-items: center; /* Aligner les éléments au centre verticalement */
-    padding: 0 10%; /* Espacement intérieur */
+  /*  padding: 0 10%; /* Espacement intérieur */
+    padding: 70px 10%; 
     position: relative; /* Pour s'assurer que le z-index fonctionne correctement */
     z-index: 1;
 }
 
 /* Style pour la section info */
 .info {
-    background-color: #16acea; /* Couleur de fond */
+    background:linear-gradient(to right, #16acea, #79cbb8);;; /* Couleur de fond */ /* Couleur de fond */
     height: 100vh; /* Hauteur de la fenêtre visible */
     display: flex; /* Utiliser Flexbox pour l'alignement */
     align-items: center; /* Aligner les éléments au centre verticalement */
@@ -118,12 +122,31 @@ section {
     display: flex; /* Utiliser Flexbox pour l'alignement */
     align-items: center; /* Aligner les éléments au centre verticalement */
     padding: 0 10%; /* Espacement intérieur */
+    position: relative;
     
 }
+.cart-button-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000; /* Assurez-vous que le bouton est au-dessus des autres éléments */
+}
 
+#view-cart-btn {
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+#view-cart-btn:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
 /* Style pour la section présentation */
 .presentation {
-    background-color: #16acea; /* Couleur de fond */
+    background:linear-gradient(to right, #16acea, #79cbb8);;; /* Couleur de fond */ /* Couleur de fond */
     height: 100vh; /* Hauteur de la fenêtre visible */
     display: flex; /* Utiliser Flexbox pour l'alignement */
     align-items: center; /* Aligner les éléments au centre verticalement */
@@ -170,7 +193,7 @@ section {
     align-items: center; /* Aligner verticalement */
     width: 150px; /* Largeur fixe */
     height: 100%; /* Hauteur complète */
-    background: blue; /* Couleur de fond */
+    background:linear-gradient(to right, #16acea, #79cbb8); /* Couleur de fond */ /* Couleur de fond */
     border: 2px solid blue; /* Bordure */
     border-radius: 5px; /* Coins arrondis */
     font-size: 20px; /* Taille de police */
@@ -185,12 +208,12 @@ section {
 /* Style spécifique pour le deuxième lien dans la boîte de boutons */
 .btn-box a:nth-child(2) {
     background: transparent; /* Fond transparent */
-    color: blue; /* Couleur du texte */
+    color:white; /* Couleur du texte */
 }
 
 /* Style pour l'effet avant le survol sur le deuxième lien */
 .btn-box a:nth-child(2)::before {
-    background: blue; /* Couleur de fond pour l'effet */
+    background:white; /* Couleur de fond pour l'effet */
 }
 
 /* Style pour l'effet de survol sur le deuxième lien */
@@ -200,7 +223,7 @@ section {
 
 /* Style pour l'effet avant le survol sur le premier lien */
 .btn-box a:nth-child(1)::before {
-    background: blue; /* Couleur de fond pour l'effet */
+    background: white; /* Couleur de fond pour l'effet */
 }
 
 /* Style pour l'effet de survol sur le premier lien */
@@ -249,7 +272,7 @@ section {
     border: 2px solid blue; /* Bordure */
     border-radius: 50%; /* Forme ronde */
     font-size: 15px; /* Taille de police */
-    color: blue; /* Couleur du texte */
+    color: white; /* Couleur du texte */
     text-decoration: none; /* Pas de soulignement */
     overflow: hidden; /* Masquer le débordement */
     transition: 0.5s; /* Transition pour l'effet (propriété corrigée) */
@@ -364,7 +387,7 @@ section {
 
 .profile-img {
     flex: 1;
-    min-width: 250px;
+    min-width: 150px;
     margin-right: 50px;
     display: flex;
     justify-content: center;
@@ -372,10 +395,10 @@ section {
 }
 
 .profile-img img {
-    border-radius: 50%;
+    border-radius: 20%;
     width: 100%;
     max-width: 300px;
-    border: 5px solid white;
+    border: 5px solid linear-gradient(to right, #16acea, #79cbb8);;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -533,7 +556,7 @@ section {
 
 .presentation {
     padding: 50px 0; /* Ajoute de l'espace autour du contenu */
-    background:  #16acea; /* Couleur de fond */
+    background:linear-gradient(to right, #16acea, #79cbb8);;; /* Couleur de fond */ /* Couleur de fond */
     text-align: center; /* Centre le contenu horizontalement */
 
     /* Pour centrer verticalement le contenu, si nécessaire */
